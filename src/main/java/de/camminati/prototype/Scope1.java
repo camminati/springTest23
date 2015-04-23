@@ -16,7 +16,7 @@ import lombok.Setter;
 public class Scope1 {
 
   @Autowired
-  SomeSubScope someOtherScope;
+  SubScope someOtherScope;
 
   @Autowired
   private MyBean myBean;

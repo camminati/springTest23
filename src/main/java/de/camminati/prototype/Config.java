@@ -15,7 +15,7 @@ public class Config {
   }
 
   @Bean
-  SomeSubScope someOtherScope(){
-    return new SomeSubScope();
+  SubScope someOtherScope(){
+    return new SubScope();
   }
 }

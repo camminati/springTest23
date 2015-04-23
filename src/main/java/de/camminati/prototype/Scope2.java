@@ -17,7 +17,8 @@ public class Scope2 {
 
 
   @Autowired
-  SomeSubScope someOtherScope;
+  SubScope someOtherScope;
+
 
   @Autowired
   private MyBean myBean;
