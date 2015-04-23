@@ -19,13 +19,13 @@ public class MultiScopeTest {
 
     final Scope1 s1 = context.getBean(Scope1.class);
     log.info("Scope-1------------>{}", s1.getMyBean().getName());
-    log.info("SubScope----------->{}", s1.getSomeOtherScope().getMyBean().getName());
-    log.info("SubSubScope-------->{}", s1.getSomeOtherScope().getSomeSubScope().getMyBean().getName());
+    log.info("|-SubScope--------->{}", s1.getSomeOtherScope().getMyBean().getName());
+    log.info("  |-SubSubScope---->{}", s1.getSomeOtherScope().getSomeSubScope().getMyBean().getName());
 
     final Scope2 s2 = context.getBean(Scope2.class);
     log.info("Scope-2------------>{}", s2.getMyBean().getName());
-    log.info("SubScope----------->{}", s2.getSomeOtherScope().getMyBean().getName());
-    log.info("SubSubScope-------->{}", s2.getSomeOtherScope().getSomeSubScope().getMyBean().getName());
+    log.info("|-SubScope--------->{}", s2.getSomeOtherScope().getMyBean().getName());
+    log.info("  |-SubSubScope---->{}", s2.getSomeOtherScope().getSomeSubScope().getMyBean().getName());
 
   }
 
