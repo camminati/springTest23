@@ -18,6 +18,7 @@ public class MultiScopeTest {
     log.info("MyBean------------->{}",context.getBean(MyBean.class).getName());
 
     final Scope1 s1 = context.getBean(Scope1.class);
+    s1.setSomething("something");
     log.info("Scope-1------------>{}", s1.getMyBean().getName());
     log.info("|-SubScope--------->{}", s1.getSomeOtherScope().getMyBean().getName());
     log.info("  |-SubSubScope---->{}", s1.getSomeOtherScope().getSomeSubScope().getMyBean().getName());

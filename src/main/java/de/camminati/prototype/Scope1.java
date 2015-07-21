@@ -25,4 +25,8 @@ public class Scope1 {
   void init() {
     this.myBean.setName("scope1");
   }
+
+  public void setSomething(String string){
+    this.getMyBean().setName(string);
+  }
 }
